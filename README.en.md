@@ -1,4 +1,4 @@
-# Metronome App
+# Light Metronome
 
 A clean, minimalist metronome web application featuring high-precision Web Audio API timing, subdivision support, individual volume controls, and an "Unsafe Mode" for professional use. Supports PWA for installation on mobile and desktop.
 
