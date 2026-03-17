@@ -21,7 +21,7 @@ A clean, minimalist metronome web application featuring high-precision Web Audio
 
 ## Usage
 
-Simply host the files on any static web server or open `index.html` in your browser.
+Simply host the files on any static web server or open [this page](https://sigmaisigma.github.io/light_metronome/) in your browser.
 
 1. Adjust BPM, Beats, and Subdivisions in the settings panel.
 2. Click the **START** button to begin.
