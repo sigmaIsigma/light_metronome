@@ -480,6 +480,12 @@
 
         function tapTempo() {
             const now = performance.now();
+            
+            // Reset if last tap was more than 3 seconds ago
+            if (tapTimes.length > 0 && now - tapTimes[tapTimes.length - 1] > 3000) {
+                tapTimes = [];
+            }
+
             tapTimes.push(now);
             if (tapTimes.length > 4) tapTimes.shift();
             if (tapTimes.length >= 2) {
@@ -590,6 +596,15 @@
         dom.inputs.full.addEventListener('change', () => {
             if (dom.inputs.full.checked) document.documentElement.requestFullscreen?.();
             else document.exitFullscreen?.();
+        });
+
+        // --- Visibility Change Handling (Wake Lock recovery) ---
+        document.addEventListener('visibilitychange', async () => {
+            if (document.visibilityState === 'visible' && isRunning) {
+                if ('wakeLock' in navigator) {
+                    try { wakeLock = await navigator.wakeLock.request('screen'); } catch (err) {}
+                }
+            }
         });
 
         // --- Init ---
