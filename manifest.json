@@ -1,0 +1,17 @@
+{
+  "name": "Light Metronome",
+  "short_name": "Metronome",
+  "description": "High-precision, low-resource metronome for professional use.",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "background_color": "#000a28",
+  "theme_color": "#000a28",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
